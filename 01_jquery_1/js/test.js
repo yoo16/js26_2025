@@ -1,2 +1,2 @@
 // ウィンドウのタイトルを変更
-document.title = "JS"
+document.title = "Hello JS"
