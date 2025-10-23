@@ -5,9 +5,10 @@ document.getElementById("message").textContent =  "はじめます";
 // 1) jqdoc と入力
 // 2) 「jqDocReadyShort」を選択
 $(function () {
-    
+    alert("完了！！！")
 });
 
+alert("はじまるよ！");
 
 // TODO:DOM読み込み前の処理: アラートで「はじまるよ」を表示
 
