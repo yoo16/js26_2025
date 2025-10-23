@@ -1,4 +1,5 @@
 // TODO: JSの復習: id=message に「はじめます」を表示
+document.getElementById("message").textContent =  "はじめます";
 
 // TODO: jQueryで、DOM読み込み後にアラート表示
 // 1) jqdoc と入力
