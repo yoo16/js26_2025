@@ -14,6 +14,6 @@ alert("はじまるよ！");
 
 // バニラJSで、DOM読み込み後にアラート表示
 // 「DOMContentLoaded」の場合
-// document.addEventListener("DOMContentLoaded", function () {
-//     alert("バニラJS")
-// })
+document.addEventListener("DOMContentLoaded", function () {
+    alert("バニラJS")
+})
