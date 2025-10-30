@@ -20,11 +20,13 @@ $(() => {
     // ️2 基本的なメソッド
     // =============================================
     let title = "";
-    // TODO: id=shop-title のテキストコンテンツ取得
+    // id=shop-title のテキストコンテンツ取得
     console.log("Original title:", title);
 
     title = '👕 Spring Apparel';
     // TODO:  id=shop-title のタイトルの設定: text()
+    $("#shop-title").text(title)
+    // document.getElementById("shop-title").textContent = title;
 
     title = `👕 Spring Apparel <span class='text-sm text-gray-400'>Men & Women Edition</span>`;
     // TODO: id=shop-title のタイトルの設定: html()
