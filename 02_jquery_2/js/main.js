@@ -98,6 +98,7 @@ $(() => {
 
     document.getElementById("all-filter-btn").addEventListener("click", () => {
         // TODO: 全商品を一旦表示
+        $(".product").removeClass("hidden");
     });
 
     document.getElementById("men-filter-btn").addEventListener("click", () => {
