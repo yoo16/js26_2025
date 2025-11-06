@@ -91,9 +91,9 @@ $(() => {
     // TODO: get(): class=info の ２番目(index=1) の商品に saleDOMを追加
     $(".info").get(1).appendChild(saleDOM);
 
-
-    // TODO: eq(): index=2 の商品（３番目の商品）に newTag タグを追加
+    // TODO: eq(): class=info の ３番目（index=2） の商品（３番目の商品）に newTag タグを追加
     const newTag = "<span class='text-xs bg-pink-200 text-pink-800 px-2 py-1 rounded'>NEW</span>";
+    $(".info").eq(2).append(newTag);
 
     // TODO: first(): 最初の商品に newTag を追加
 
