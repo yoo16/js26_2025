@@ -99,9 +99,13 @@ $(() => {
     // infoElements[2].insertAdjacentHTML('beforeend', newTag);
 
     // TODO: first(): 最初の商品に newTag を追加
+    $(".info").first().append(newTag);
 
     // TODO: last(): 最後の商品に hotTag を追加
     const hotTag = "<span class='text-xs bg-sky-200 text-sky-800 px-2 py-1 rounded'>HOT</span>";
+    $(".info").last().append(hotTag)
+    // バニラJSの場合
+    // infoElements[infoElements.length - 1].insertAdjacentHTML('beforeend', hotTag);
 
     // TODO: 奇数番目の class=cart-item に class=oddClass を追加
     const oddClass = "bg-gray-100";
