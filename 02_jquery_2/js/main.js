@@ -51,7 +51,7 @@ $(() => {
     //  4 親子・子孫関係
     // =============================================
     // TODO: id=product-list の子要素 class=productをすべて選択
-    const products = {}
+    const products = $("#product-list > .product");
     console.log(products);
 
     // 商品カードのクラス
@@ -62,8 +62,9 @@ $(() => {
 
     // TODO: 子孫：商品名 class=product .name にクラス追加
     const productNameClass = "font-semibold text-lg";
+    $(".product .name").addClass(productNameClass)
 
-    // TODO: 子孫：商品価格 .product .note にクラス追加
+    // TODO: 子孫：商品情報 .product .note にクラス追加
     const noteClass = "text-sm text-gray-500";
 
     // TODO: 子孫：商品価格 .product .price にクラス追加
