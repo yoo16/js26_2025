@@ -66,9 +66,11 @@ $(() => {
 
     // TODO: 子孫：商品情報 .product .note にクラス追加
     const noteClass = "text-sm text-gray-500";
+    $(".product .note").addClass(noteClass)
 
     // TODO: 子孫：商品価格 .product .price にクラス追加
     const priceClass = "font-bold text-lg";
+    $(".product .price").addClass(priceClass)
 
     // バニラJSの場合
     // document.querySelectorAll('.men').forEach(el => {
@@ -86,7 +88,9 @@ $(() => {
     const saleDOM = $(saleTag).get(0);
     console.log(saleDOM);
 
-    // TODO: get(): index=1 の商品に saleTag タグを追加
+    // TODO: get(): class=info の ２番目(index=1) の商品に saleDOMを追加
+    $(".info").get(1).appendChild(saleDOM);
+
 
     // TODO: eq(): index=2 の商品（３番目の商品）に newTag タグを追加
     const newTag = "<span class='text-xs bg-pink-200 text-pink-800 px-2 py-1 rounded'>NEW</span>";
