@@ -22,11 +22,11 @@ $('#input-text').on({
         $("#result-event").text(inputText);
     },
     // TODO: focusイベント
-    "": function () {
+    focus: function () {
         $(this).addClass('bg-blue-100')
     },
     // TODO: blurイベント
-    "": function () {
+    blur: function () {
         $(this).removeClass('bg-blue-100')
     }
 });
