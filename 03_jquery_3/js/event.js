@@ -16,9 +16,9 @@ $("#click-button").on("click", function () {
 
 $('#input-text').on({
     // TODO: inputイベント
-    "": function () {
-        // TODO: 入力されたテキストを取得
-        const inputText = "";
+    input: function () {
+        // TODO: 入力されたテキストを取得 id=input-text から
+        const inputText = $("#input-text").val()
         $("#result-event").text(inputText);
     },
     // TODO: focusイベント
