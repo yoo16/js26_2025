@@ -50,7 +50,7 @@ $('#character-list li').on('click', function () {
 function updateImage(id) {
     const imagePath = `images/character_${id}.png`;
     // TODO: img タグの src に画像パスを設定: attr();
-    $('#character-image')
+    $('#character-image').attr('src', imagePath)
 }
 
 // mouseoverイベントハンドラー
