@@ -4,12 +4,13 @@
 //  })
 
 // TODO: クリックイベント: イベント名 = click
-$("#click-button").on("", function () {
+$("#click-button").on("click", function () {
     // TODO: id=input-text のデータ取得: val()
-    var userName = "";
+    var userName = $('#input-text').val()
     if (userName) {
         var message = userName + "さん、ようこそ！";
         // TODO: id=result-event にメッセージ表示: text()
+        $('#result-event').text(message)
     }
 });
 
