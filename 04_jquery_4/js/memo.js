@@ -24,7 +24,13 @@ $(function () {
         const deleteClass = "text-sm bg-red-500 text-white cursor-pointer rounded-full px-2 py-1"
         span.addClass(deleteClass)
 
-        // span タグを li タグの子要素として追加
+        // クリックしたら親要素（li）を削除
+        span.on('click', function() {
+            // alert('delete!')
+            // 自分の親要素
+            $(this).parent().remove()
+        })
+
         li.append(span)
 
         return li;
