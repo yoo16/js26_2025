@@ -33,7 +33,8 @@ $(function () {
 
         // li をクリックしたら
         li.on('click', function() {
-            alert('li clicked!')
+            // 訂正せんを引く
+            $(this).toggleClass('line-through')
         })
 
         li.append(span)
