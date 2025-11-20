@@ -31,6 +31,11 @@ $(function () {
             $(this).parent().remove()
         })
 
+        // li をクリックしたら
+        li.on('click', function() {
+            alert('li clicked!')
+        })
+
         li.append(span)
 
         return li;
