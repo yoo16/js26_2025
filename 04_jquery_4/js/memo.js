@@ -27,7 +27,7 @@ $(function () {
         // クリックしたら親要素（li）を削除
         span.on('click', function() {
             // alert('delete!')
-            // 自分の親要素
+            // 自分の親要素 li を削除
             $(this).parent().remove()
         })
 
@@ -36,6 +36,8 @@ $(function () {
             // 訂正せんを引く
             $(this).toggleClass('line-through')
         })
+        // li をマウスオーバーしたら 自分の背景をかえる
+        // li をマウスアウトしたら 元にもどす
 
         li.append(span)
 
