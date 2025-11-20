@@ -70,8 +70,10 @@ const mouseOutHandler = function (event) {
 // TODO: マウスアウトイベントに mouseOutHandler を登録
 $('#hoverBox').on(
     {
-        "": "",
-        "": "",
+        // マウスオーバーイベント
+        mouseover: mouseOverHandler,
+        // マウスアウトイベント
+        mouseout: mouseOutHandler,
     }
 )
 
