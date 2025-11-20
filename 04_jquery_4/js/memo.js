@@ -9,10 +9,20 @@ $(function () {
         const value = getInputValue();
         //TODO: liタグを作成し、テキスト表示
         const li = $("<li>");
+        // バニラJSの場合
+        // const li = document.createElement('li');
         li.text(value)
         // console.log(li)
         //TODO: addClass() で defaultClass を追加
         li.addClass(defaultClass)
+
+        // span タグを作成
+        const span = $('<span>')
+        // span タグに x の文字を設定
+        span.text('×')
+        // span タグを li タグの子要素として追加
+        li.append(span)
+
         return li;
     }
 
