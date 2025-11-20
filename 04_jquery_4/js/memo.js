@@ -18,11 +18,16 @@ $(function () {
 
         // span タグを作成
         const span = $('<span>')
+        // const span = document.createElement('span');
+
         // span タグに x の文字を設定
         span.text('×')
+        // spna.innerText = '×'
+
         // class を追加
         const deleteClass = "text-sm bg-red-500 text-white cursor-pointer rounded-full px-2 py-1"
         span.addClass(deleteClass)
+        // span.classList.add(deleteClass)
 
         // クリックしたら親要素（li）を削除
         span.on('click', function () {
@@ -30,6 +35,9 @@ $(function () {
             // 自分の親要素 li を削除
             $(this).parent().remove()
         })
+        // span.addEventListener('click', function () {
+        //     this.parentElement.remove()
+        // })
 
         // li をクリックしたら
         li.on('click', function () {
