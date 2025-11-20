@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-10">
+    <h1 class="text-2xl font-bold mb-6">📝 メモリストアプリ</h1>
+
+    <!-- ユーザー入力用テキストボックス -->
+    <div class="mb-4">
+        <input type="text" id="input-text" class="border border-gray-300 rounded p-2" placeholder="ここにメモを入力" />
+    </div>
+    <div class="mb-4 flex space-x-2 items-center">
+        <button id="btn-append" class="bg-sky-500 text-white py-1 px-3 rounded hover:bg-sky-600">追加</button>
+        <button id="btn-prepend" class="bg-sky-500 text-white py-1 px-3 rounded hover:bg-sky-600">先頭追加</button>
+        <button id="btn-before" class="bg-sky-500 text-white py-1 px-3 rounded hover:bg-sky-600">前に追加</button>
+        <button id="btn-after" class="bg-sky-500 text-white py-1 px-3 rounded hover:bg-sky-600">後に追加</button>
+        <button id="btn-remove" class="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600">削除</button>
+    </div>
+
+    <!-- フラッシュメッセージ -->
+    <div id="message" class="p-3 text-green-800"></div>
+
+    <ul id="item-list" class="bg-white rounded-lg w-full max-w-md divide-y divide-gray-200">
+    </ul>
+
+    <!-- アプリ用スクリプト -->
+    <script src="js/memo.js"></script>
+</body>
+
+</html>

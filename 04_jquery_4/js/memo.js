@@ -1,0 +1,94 @@
+$(function () {
+    var selected = $();
+
+    const defaultClass = "flex justify-between bg-white items-center p-3";
+    const selectedClass = "selected bg-sky-100";
+    const unselectedClass = "bg-gray-100";
+
+    function newItem() {
+        const value = getInputValue();
+        //TODO: liタグを作成し、テキスト表示
+        const li = $("<li>");
+        li.text(value)
+        // console.log(li)
+        //TODO: addClass() で defaultClass を追加
+        li.addClass(defaultClass)
+        return li;
+    }
+
+    function flashMessage(text) {
+        $('#message').text(text);
+        setTimeout(function () {
+            $('#message').text('');
+        }, 2000);
+    }
+
+    function getInputValue() {
+        // テキストボックスの値を取得し、前後の空白を削除
+        // 値が空の場合は 'new memo' を返す
+        return $('#input-text').val().trim() || 'new memo';
+    }
+
+    $('#btn-append').on('click', function () {
+        const element = newItem();
+        // TODO: 親要素(id=item-list)の最後に追加(append)
+        $('#item-list').append(element);
+
+        $('#input-text').val('');
+    });
+
+    $('#btn-prepend').on('click', function () {
+        const element = newItem();
+        // TODO: 親要素(id=item-list)の最初に追加(prepend)
+        $('#item-list').prepend(element);
+
+        // TODO: テキストボックス(id=input-text)を空にする
+        $('#input-text').val('');
+    });
+
+    $('#btn-before').on('click', function () {
+        if (selected.length) {
+            const element = newItem();
+            // TODO: 選択中の要素の前に追加(before)
+            selected.before(element);
+
+            $('#input-text').val('');
+        } else {
+            flashMessage('メモを選択してください');
+        }
+    });
+
+    $('#btn-after').on('click', function () {
+        if (selected.length) {
+            const element = newItem();
+            // TODO: 選択中の要素の後に追加(after)
+            selected.after(element);
+
+            $('#input-text').val('');
+        } else {
+            flashMessage('メモを選択してください');
+        }
+    });
+
+    $('#btn-remove').on('click', function () {
+        if (selected.length) {
+            // TODO: 選択中の要素を削除(remove)
+            selected.remove();
+
+            // 選択解除
+            selected = $();
+        } else {
+            flashMessage('メモを選択してください');
+        }
+    });
+
+    $('#item-list').on('click', 'li', function () {
+        // すべての li の選択解除
+        $('#item-list li').removeClass(selectedClass).addClass(unselectedClass);
+        // 自分の場合は、選択状態
+        $(this).addClass(selectedClass).removeClass(unselectedClass);
+
+        // TODO: 選択処理: 最後にクリックされた li が記憶
+        selected = $(this)
+    });
+});
