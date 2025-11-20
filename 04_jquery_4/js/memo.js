@@ -25,19 +25,29 @@ $(function () {
         span.addClass(deleteClass)
 
         // クリックしたら親要素（li）を削除
-        span.on('click', function() {
+        span.on('click', function () {
             // alert('delete!')
             // 自分の親要素 li を削除
             $(this).parent().remove()
         })
 
         // li をクリックしたら
-        li.on('click', function() {
+        li.on('click', function () {
             // 訂正せんを引く
             $(this).toggleClass('line-through')
         })
         // li をマウスオーバーしたら 自分の背景をかえる
         // li をマウスアウトしたら 元にもどす
+        li.on({
+            mouseover: function () {
+                // 自分の背景をかえる : class="bg-sky-300"
+                $(this).addClass('bg-sky-300')
+            },
+            mouseout: function () {
+                // 自分の背景を元にもどす : class=""
+                $(this).removeClass('bg-sky-300')
+            },
+        })
 
         li.append(span)
 
