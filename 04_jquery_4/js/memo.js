@@ -20,6 +20,10 @@ $(function () {
         const span = $('<span>')
         // span タグに x の文字を設定
         span.text('×')
+        // class を追加
+        const deleteClass = "'text-xs bg-red-500 text-white cursor-pointer rounded-full px-2 py-1'"
+        span.addClass(deleteClass)
+
         // span タグを li タグの子要素として追加
         li.append(span)
 
