@@ -21,17 +21,20 @@ $(function () {
         // TODO: character_1 を toggle() でトグル表示
         character_1.toggle()
     });
-
+    // id=fadeInBtn がクリックされたとき
     $("#fadeInBtn").on("click", function () {
         // TODO: character_2 を fadeIn() でフェードイン
+        character_2.fadeIn(1000)
     });
-
+    // id=fadeOutBtn がクリックされたとき
     $("#fadeOutBtn").on("click", function () {
         // TODO: character_2 を fadeOut() でフェードアウト
+        character_2.fadeOut(1000)
     });
 
     $("#fadeToggleBtn").on("click", function () {
         // TODO: character_2 を fadeToggle() でフェードトグル
+        character_2.fadeToggle(1000)
     });
 
     $("#slideDownBtn").on("click", function () {
