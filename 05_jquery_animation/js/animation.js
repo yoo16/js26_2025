@@ -51,20 +51,24 @@ $(function () {
         // TODO: character_3 を slideToggle() でスライドトグル
         character_3.slideToggle(1000)
     });
-
+    // id=shakeBtn がクリックされたとき
     $("#shakeBtn").on("click", function () {
         const distance = 10; // 揺れ幅
-        const delay = 50;   // 揺れの間隔
+        const delay = 50;   // 揺れの間隔: 0.05秒
         const times = 4;     // 揺れる回数
 
         function shake(element, count) {
             if (count > 0) {
                 // console.log(element);
                 // TODO: アニメーションで左に揺らす
+                element.animate({ left: -distance }, delay)
                 // TODO: アニメーションで右に揺らす
+                element.animate({ left: distance }, delay)
                 // TODO: コールバックで再帰的に shake() を呼び出す
+                shake(element, count - 1);
             } else {
                 // TODO: 最後に元の位置へ戻す
+                element.animate({ left: '0px' }, delay);
             }
         }
         shake(character_4, times);
