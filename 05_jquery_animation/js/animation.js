@@ -36,17 +36,20 @@ $(function () {
         // TODO: character_2 を fadeToggle() でフェードトグル
         character_2.fadeToggle(1000)
     });
-
+    // id=slideDownBtn がクリックされたとき
     $("#slideDownBtn").on("click", function () {
         // TODO: character_3 を slideDown() でスライド表示
+        character_3.slideDown(1000)
     });
 
     $("#slideUpBtn").on("click", function () {
         // TODO: character_3 を slideUp() でスライド非表示
+        character_3.slideUp(1000)
     });
 
     $("#slideToggleBtn").on("click", function () {
         // TODO: character_3 を slideToggle() でスライドトグル
+        character_3.slideToggle(1000)
     });
 
     $("#shakeBtn").on("click", function () {
