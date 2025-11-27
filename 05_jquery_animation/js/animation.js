@@ -109,6 +109,14 @@ $(function () {
             // TODO: キューに追加: queue()
             // TODO: コールバックで this を表示して class=hidden を削除
             // TODO: 次の処理: next()
+            $(this)
+                .addClass("hidden")
+                .delay(i * 300)
+                .queue(function (next) {
+                    $(this).removeClass("hidden");
+                    next();
+                })
+                .fadeIn();
         });
     });
 
