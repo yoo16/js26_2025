@@ -6,16 +6,20 @@ $(function () {
     var box1 = $("#box1");
     var box2 = $("#box2");
 
+    // id=showBtn がクリックされたとき
     $("#showBtn").on("click", function () {
         // TODO: character_1 を show() で表示
+        character_1.show()
     });
-
+    // id=hideBtn がクリックされたとき
     $("#hideBtn").on("click", function () {
         // TODO: character_1 を hide() で非表示
+        character_1.hide()
     });
-
+    // id=toggleBtn がクリックされたとき
     $("#toggleBtn").on("click", function () {
         // TODO: character_1 を toggle() でトグル表示
+        character_1.toggle()
     });
 
     $("#fadeInBtn").on("click", function () {
