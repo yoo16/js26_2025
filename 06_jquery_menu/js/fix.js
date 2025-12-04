@@ -2,7 +2,7 @@ $(function () {
     // スクロール固定
     const nav = $("#nav");
     // TODO: nav の現在の top を取得: offset().top
-    const navPos = 0;
+    const navPos = nav.offset().top;
 
     $(window).scroll(function () {
         // TODO: スクロール位置: $(window).scrollTop()
