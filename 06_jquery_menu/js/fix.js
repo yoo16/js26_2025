@@ -12,13 +12,15 @@ $(function () {
         if (scrollTop > navPos) {
             // TODO: 固定 css設定：position: fixed
             nav.css({
-                "poisition": "fixed",
-                "top": "0", 
+                "position": "fixed",
+                "top": "0",
                 "width": "100%"
             });
         } else {
             // TODO: 固定解除 css設定：position: static
-            nav.css({});
+            nav.css({
+                "position": "static"
+            });
         }
     });
 });
