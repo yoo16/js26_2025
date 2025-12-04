@@ -36,18 +36,20 @@ $(function () {
         // メニューの幅を取得
         const width = slideMenu.outerWidth();
         // TODO: class=on をトグル判定: hasClass('on')
-        if (true) {
-            // 閉じる処理：幅の分だけマイナス位置へ
+        if (slideMenu.hasClass('on')) {
+            // メニューが表示中の時に閉じる処理：幅の分だけマイナス位置へ
             x = -width + 'px';
             // TODO: class=on を削除: removeClass('on')
+            slideMenu.removeClass('on')
         } else {
-            // 開く処理：0pxの位置へ
+            // メニュー表示(開く処理)：0pxの位置へ
             x = '0px';
             // TODO: class=on を追加: addClass('on')
+            slideMenu.addClass('on')
         }
 
         // TODO: marginLeft を x にしてアニメーション
-        slideMenu.stop().animate({ }, 300); 
+        slideMenu.stop().animate({ marginLeft: x }, 300); 
     }
 
     initMenu();
