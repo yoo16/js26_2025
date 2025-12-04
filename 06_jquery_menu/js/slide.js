@@ -18,13 +18,14 @@ $(function () {
     // 初期化処理
     function initMenu() {
         // TODO: メニューの幅を取得: outerWidth()
-        const width = 0
+        const width = slideMenu.outerWidth()
 
         // TODO: メニューを隠す（左に隠す）
         // CSSでnoneにしていたのを解除
         // 幅の分だけ左に隠す: marginLeft を -width px
         slideMenu.css({
             display: 'block',
+            marginLeft: -width
         });
     }
 
