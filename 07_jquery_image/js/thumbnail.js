@@ -1,5 +1,11 @@
 $(function () {
     // TODO: サムネイルクリック
+    // 1. jqon と入力 ※VSCodeプラグイン の jQuery Code snippets を利用
+    // 2. class="thumbnail" を指定
+    // 3. クリックイベントを設定
+    $('.thumbnail').on('click', function () {
+        
+    });
     // TODO: img から 画像パス src を取得
     // TODO: メイン画像の img をフェードアウト
     // TODO: コールバックで、メイン画像の img にパスを設定してフェードイン
