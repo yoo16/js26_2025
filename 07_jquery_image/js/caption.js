@@ -5,8 +5,10 @@ $(function () {
     function loadImages() {
 
         // TODO: items を繰り返し: forEach
-        // --- ここから（繰り返し） ---
-        const listItem = `
+        // foreach と入力して forEach 文を作成
+        items.forEach(data => {
+            // --- ここから（繰り返し） ---
+            const listItem = `
             <li class="relative group">
                 <div class="loading absolute inset-0 flex items-center justify-center bg-gray-200">
                     <div class="loader border-4 border-gray-300 border-t-blue-500 rounded-full w-8 h-8 animate-spin"></div>
@@ -17,8 +19,12 @@ $(function () {
                     <div class="caption p-4">${data.caption}</div>
                 </div>
             </li>`;
-        // TODO: listItem を $imageList に追加
-        // --- ここまで（繰り返し） ---
+            // TODO: listItem を $imageList に追加
+            $imageList.append(listItem)
+            // --- ここまで（繰り返し） --- 
+        });
+
+
 
         // 画像が読み込みイベント
         $('.item').on('load', function () {
