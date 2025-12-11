@@ -8,10 +8,11 @@ $(function () {
         const src = $(this).attr('src')
         // jqfadeOut
         // id="main-image" を指定してフェードアウト
-        $("#main-image").fadeOut(300);
+        $("#main-image").fadeOut(300, function(){
+            // コールバックで、メイン画像の img にパスを設定してフェードイン
+            $("#main-image").attr("src", src).fadeIn(300)
+        });
     });
-    // TODO: メイン画像の img をフェードアウト
-    // TODO: コールバックで、メイン画像の img にパスを設定してフェードイン
 });
 
 
