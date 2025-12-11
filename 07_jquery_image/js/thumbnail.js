@@ -4,9 +4,10 @@ $(function () {
     // 2. class="thumbnail" を指定
     // 3. クリックイベントを設定
     $('.thumbnail').on('click', function () {
-        
+        // TODO: img = $(this) から 画像パス src を取得
+        const src = $(this).attr('src')
+
     });
-    // TODO: img から 画像パス src を取得
     // TODO: メイン画像の img をフェードアウト
     // TODO: コールバックで、メイン画像の img にパスを設定してフェードイン
 });
