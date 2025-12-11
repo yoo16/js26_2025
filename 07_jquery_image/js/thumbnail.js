@@ -6,7 +6,9 @@ $(function () {
     $('.thumbnail').on('click', function () {
         // TODO: img = $(this) から 画像パス src を取得
         const src = $(this).attr('src')
-
+        // jqfadeOut
+        // id="main-image" を指定してフェードアウト
+        $("#main-image").fadeOut(300);
     });
     // TODO: メイン画像の img をフェードアウト
     // TODO: コールバックで、メイン画像の img にパスを設定してフェードイン
