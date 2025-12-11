@@ -40,9 +40,11 @@ $(function () {
     $imageList.on({
         mouseenter: function () {
             // TODO: マウスオーバーでキャプション表示: class=caption: fadeIn()
+            $(this).find('.caption').stop().fadeIn(200)
         },
         mouseleave: function () {
             // TODO: マウスアウトでキャプション非表示: class=caption: fadeOut()
+            $(this).find('.caption').stop().fadeOut(200)
         }
     }, 'li');
 
