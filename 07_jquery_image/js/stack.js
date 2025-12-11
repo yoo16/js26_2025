@@ -18,8 +18,8 @@ function stackAnimation1() {
     // TODO: imagesから 最上位のスタック取得: last()
     const topImage = images.last()
     const marginTop = 50;
-
-    $topImage
+    // $ マークはずしてね
+    topImage
         .animate({
             opacity: 0.8,
             left: '100%',
