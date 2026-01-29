@@ -29,8 +29,10 @@ $(document).ready(function () {
         const progress = getProgress(target, scrollY)
         if (progress > 0) {
             // TODO: target に class=is-active を追加
+            target.addClass('is-active');
         } else {
             // TODO: target に class=is-active を削除
+            target.removeClass('is-active');
         }
     }
 
