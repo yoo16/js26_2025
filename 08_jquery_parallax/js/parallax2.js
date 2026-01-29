@@ -18,7 +18,7 @@ $(document).ready(function () {
         },
         // TODO: fadeLeftエフェクト
         slideLeft: ($el) => {
-            const startX = 80;
+            const startX = 500;
             $el.css({ transform: `translateX(${startX}px)`, opacity: 0, visibility: 'visible' })
                 .animate({ opacity: 1 }, {
                     duration: 1000,
