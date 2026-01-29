@@ -54,5 +54,6 @@ $(document).ready(function () {
     // data-animate属性を持つ要素を監視
     $('[data-animate]').each(function () {
         // TODO: 監視開始: observe(this)
+        observer.observe(this)
     });
 });
