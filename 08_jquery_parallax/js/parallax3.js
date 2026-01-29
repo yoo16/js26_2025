@@ -41,6 +41,7 @@ $(document).ready(function () {
         const progress = getProgress(target, scrollY)
         if (progress > 0 && progress <= 1) {
             // TODO: target に css{ opacity: progress } を追加
+            target.css({ opacity: progress });
         }
     }
 
