@@ -35,14 +35,15 @@ $(document).ready(function () {
         // entries: 監視対象の配列
         entries.forEach(entry => {
             // TODO: 要素が表示領域に入ったか確認
-            if (false) {
+            if (entry.isIntersecting) {
                 const $target = $(entry.target);
-                // TODO: data-animate 取得
-                const type = '';
+                // TODO: data-animate プロパティ取得
+                const type = $target.data('animate');
                 if (animations[type]) {
                     // クラスを削除してからアニメーション開始
                     $target.removeClass('animate-init');
                     // TODO: アニメーションの実行: animations[type]($target);
+                    animations[type]($target)
                 }
                 // TODO: 監視を解除 （１度きりのエフェクトにしたい場合）: unobserve(entry.target)
             }
