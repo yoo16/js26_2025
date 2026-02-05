@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
      */
     function loadUser() {
         try {
-            // テキストエリアからJSONデータ（テキスト）を取得
-            jsonString = document.getElementById('json-user').textContent;
+            // TODO: id="data" のテストを取得
+            jsonString = document.getElementById('data').textContent;
             // TODO: JSONをパースし、ユーザオブジェクトに変換
-            user = {};
+            user = JSON.parse(jsonString);
 
             // ユーザ情報表示
             displayUser(user);
