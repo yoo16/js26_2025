@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
      */
     function updateUser() {
         try {
-            // 各フィールドから値を取得
+            // 各フィールドから値を取得: JavaScriptオブジェクトに設定
             user.name = document.getElementById('user-name').value;
             user.email = document.getElementById('user-email').value;
             user.birthday = document.getElementById('user-birthday').value;
             user.city = document.getElementById('user-city').value;
 
-            // TODO: JSONに変換
-            jsonString = "";
+            // TODO: JSON（テキストデータ）に変換
+            jsonString = JSON.stringify(user);
             // テキストエリアにJSONデータ表示
             document.getElementById('json-user').textContent = jsonString
         } catch (error) {
