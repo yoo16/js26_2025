@@ -3,6 +3,7 @@ const resultDiv = document.getElementById('result');
 
 const xhr = new XMLHttpRequest();
 // TODO: XHRリクエスト（非同期）:open() : GETリクエストを設定
+xhr.open('GET', API_URL, true)
 
 //  XHRリクエスト（非同期）:onload()
 xhr.onload = function () {
@@ -23,6 +24,7 @@ xhr.onerror = function () {
 };
 
 // TODO: XHRリクエスト（非同期）:send()
+xhr.send()
 
 function renderUsers(users) {
     resultDiv.innerHTML = ''; // クリア
