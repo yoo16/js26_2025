@@ -69,7 +69,7 @@ const searchHandler = async () => {
     try {
         // TODO: 郵便番号検索APIにアクセス
         const data = await searchAddress(zipcode);
-        console
+        console.log(data)
         
         if (data && data.results) {
             const results = data.results[0];
