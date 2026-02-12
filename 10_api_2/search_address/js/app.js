@@ -64,11 +64,12 @@ const searchHandler = async () => {
 
     errorDisplay.innerHTML = '';
     // モーダルを表示
-    loadingModal.classList.remove('hidden');
+    // loadingModal.classList.remove('hidden');
 
     try {
         // TODO: 郵便番号検索APIにアクセス
         const data = await searchAddress(zipcode);
+        console
         
         if (data && data.results) {
             const results = data.results[0];
@@ -82,9 +83,9 @@ const searchHandler = async () => {
     } catch (e) {
         errorDisplay.innerHTML = '通信エラーが発生しました';
     } finally {
-        setTimeout(() => {
-            loadingModal.classList.add('hidden');
-        }, 500);
+        // setTimeout(() => {
+        //     loadingModal.classList.add('hidden');
+        // }, 500);
     }
 }
 
